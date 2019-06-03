@@ -1,0 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type:none; 
+	text-decoration:none;
+}
+.conter-rg{
+    margin-left: 10%;
+	width: 80%;
+	background: #E2EFEE;
+}
+.conter-rg h3{
+	margin-top: 2%;
+	text-align: center;
+}
+.infor{
+	margin-left: 15%;
+	width: 70%;
+	height: 10%;
+	border-radius: 5px;
+	margin-top: 2%;
+	background: white;
+}
+.add{
+	margin-top: 2%;
+	text-align: center;
+	background: linear-gradient(45deg,#D1F0EF,#E2EFEE);
+}
+.infor ul{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; 
+}
+
+.infor ul button{
+	height: 50%;
+	width: 10%;
+	border-radius: 10px;
+	background: linear-gradient(45deg,#D1F0EF,#E2EFEE);
+}
+
+
+.bottm{
+    width: 100%;
+    height: 60%;
+}
+.bottm #tab{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    border-collapse: collapse; 
+    /*border: 1px solid #C0C0C0;*/
+    border-top: 1px solid #666;
+
+}
+
+.bottm1 #tab tr{
+	height: 50px;
+	border-top: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+tr:hover { 
+background-color:#3d80df; 
+color: #fff; 
+} 
+thead tr:hover { 
+background-color: transparent; 
+color: inherit; 
+} 
+.odd { 
+background-color:#edf5ff; 
+} 
+.bottm1 #tab{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    border-collapse: collapse; 
+    border-top: 1px solid #666;
+}
+.bottm1 #tab thead{
+	background: #ccc url(../img/t013fc37feb247fe4b3.gif) repeat-x left center; 
+    border-top: 1px solid #a5a5a5; 
+    border-bottom: 1px solid #a5a5a5;
+}

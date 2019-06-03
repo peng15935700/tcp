@@ -1,0 +1,27 @@
+<%- include ./common/header.ejs  %>
+
+<div id="fade" class="black_overlay">
+</div>
+<div class="white_content" style="display: block;">
+    <form class="content" method = "POST" action="http://localhost:4000/login">
+        <div class="lt">
+            <p>登录</p>
+            <ul>
+                <li>
+                    <a>用户名:  </a><input type="text" name="username" placeholder="username">
+                </li>
+                <li>
+                    <a>密  码 :  </a><input type="password" name="password" placeholder="Password">
+                </li>
+                <li>
+                    <a href="/register">没有账号？前往注册 ！！</a>
+                </li>
+            </ul>
+        </div>
+        <div class="rt">
+            <button id="logo" style="outline:none;">登录</button>
+        </div>
+    </form>
+</div>
+
+<%- include ./common/footer.ejs  %>

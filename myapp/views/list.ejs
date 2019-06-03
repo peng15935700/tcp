@@ -1,0 +1,65 @@
+<%- include ./common/header.ejs  %>
+<div class="conter-rg" id="rg" style="display: block;">
+    <h3>请输入查询条件</h3>
+    <form method="GET" action="http://localhost:4000/add/list/queryp">
+        <div class="infor">
+            <ul>
+                <li>用户名：<input type="text" name="name" placeholder="请输入内容"></li>
+                <button type="submit">查询</button>
+            </ul>
+
+        </div>
+    </form>
+    <div class="add">
+        <a href="/add"><button type="submit">添加信息</button></a>
+    </div>
+
+    <div class="bottm1">
+        <table id="tab" width="80%" height="100%">
+            <thead>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+
+                </tr>
+            </thead>
+            <tr class="odd">
+                <td>id</td>
+                <td>头像</td>
+                <td>用户名</td>
+                <td>年龄</td>
+                <td>身份证</td>
+                <td>电话</td>
+                <td>留言</td>
+                <td>操作时间</td>
+                <td>修改时间</td>
+                <td>操作</td>
+            </tr>
+            <% for(var i=0;i<arr.length;i++){  %>
+            <tr>
+                <td><%=i+1%></td>
+                <td><img src="<%=arr[i].pic%>" style="width:30px;" class="img-circle"></td>
+                <td><%=arr[i].name%></td>
+                <td><%=arr[i].age%></td>
+                <td><%=arr[i].identity%></td>
+                <td><%=arr[i].phone%></td>
+                <td><%=arr[i].message%></td>
+                <td><%=moment(arr[i].createAt).format('YYYY/MM/DD HH:mm:ss')%></td>
+                <td><%=moment(arr[i].updateAt).format('YYYY/MM/DD HH:mm:ss')%></td>
+                <td><a href="/product/update/<%=arr[i].id%>">修改</a> <a
+                        href="/product/delete/<%=arr[i].id%>?img=<%=arr[i].pic%>">删除</a></td>
+            </tr>
+            <% }%>
+        </table>
+    </div>
+</div>
+
+<%- include  ./common/footer.ejs  %>
